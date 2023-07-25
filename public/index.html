@@ -26,13 +26,13 @@
         <nav class="menu">
             <ul class="navbar">
                 <ul>
-                    <a id="home-nav">
+                    <a onclick="fetchPage('home')">
                         <li class="navbar-h">Home</li>
                     </a>
-                    <a id="shop">
+                    <a onclick="fetchPage('products')">
                         <li class="navbar-h">Shop</li>
                     </a>
-                    <a id="services">
+                    <a onclick="fetchPage('services')">
                         <li class="navbar-h">Services</li>
                     </a>
                 </ul>
@@ -80,8 +80,8 @@
                 <p class="hparagraph">Enjoy the taste</p>
                 <p class="phb">Your Focus Deserves Our best Coffee!</p>
                 <div class="but">
-                    <button id="home" class="button-signup">Sign In</button>
-                    <button id="home1" class="button-signin">Sign Up</button>
+                    <button onclick="fetchPage('home')" class="button-signup">Sign In</button>
+                    <button onclick="fetchPage('home')" class="button-signin">Sign Up</button>
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@
                 <ul class="navbar">
                     <li class="navbar-f">About Us</li>
                     <a id="contact">
-                        <li class="navbar-f">Contact Us</li>
+                        <li class="navbar-f" onclick="fetchPage('contactUs')">Contact Us</li>
                     </a>
                     <li class="navbar-f">Policy & Privacy</li>
                 </ul>
@@ -125,19 +125,13 @@
         document.getElementById("home").addEventListener("click", () => {
             fetchPage("home");
         });
-        document.getElementById("home1").addEventListener("click", () => {
-            fetchPage("home");
-        });
-        document.getElementById("home-nav").addEventListener("click", () => {
-            fetchPage("home");
-        });
-        document.getElementById("shop").addEventListener("click", () => {
+        document.getElementById("products").addEventListener("click", () => {
             fetchPage("products");
         });
         document.getElementById("services").addEventListener("click", () => {
             fetchPage("services");
         });
-        document.getElementById("contact").addEventListener("click", () => {
+        document.getElementById("contactUs").addEventListener("click", () => {
             fetchPage("contactUs");
         });
     </script>

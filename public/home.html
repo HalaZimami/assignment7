@@ -29,13 +29,13 @@
         <nav class="menu">
             <ul class="navbar">
                 <ul>
-                    <a id="home-nav">
+                    <a onclick="fetchPage('home')">
                         <li class="navbar-h">Home</li>
                     </a>
-                    <a id="shop">
+                    <a onclick="fetchPage('products')">
                         <li class="navbar-h">Shop</li>
                     </a>
-                    <a id="services">
+                    <a onclick="fetchPage('services')">
                         <li class="navbar-h">Services</li>
                     </a>
                 </ul>
@@ -78,12 +78,12 @@
 
     <!-- //Offers/Ads section -->
     <div class="offers">
-        <a id="ad1">
+        <a onclick="fetchPage('products')">
             <div class="ads ad1" style="background-image: url('images/ads1.png');">
                 <p class="p-ads"> <span class="natural">Natural!!</span> <br> Get Garden <br> Coffee</p>
             </div>
         </a>
-        <a id="ad2">
+        <a onclick="fetchPage('products')">
             <div class="ads ad2" style="background-image: url('images/ads2.png');">
                 <p class="offer"> <span class="natural" style="color: #7EB693;">Offer!!</span>
                     <br> Get 10% off<br>
@@ -99,25 +99,25 @@
     <div class="categories">
         <p class="categories-1">What We Offer For You</p>
         <div class="catigories-2">
-        <a id="arabica">
+        <a onclick="fetchPage('arabica')">
                 <div class="catigory1 catigory">
                     <img src="images/arabica.png" alt="">
                     <p class="c-paragraph">Arabica Coffee <br> Beans</p>
                 </div>
         </a>
-        <a id="robusta">
+        <a  onclick="fetchPage('robusta')">
             <div class="catigory2 catigory">
                 <img src="images/robusta.png" alt="">
                 <p class="c-paragraph">Robusta Coffee <br> Beans</p>
             </div>
         </a>
-        <a id="liberica">
+        <a  onclick="fetchPage('liberica')">
             <div class="catigory3 catigory">
                 <img src="images/liberica.png" alt="">
                 <p class="c-paragraph">Liberica Coffee <br> Beans</p>
             </div>
         </a>
-        <a id="excelsa">
+        <a  onclick="fetchPage('excelsa')">
             <div class="catigory4 catigory">
                 <img src="images/excelsa.png" alt="">
                 <p class="c-paragraph">excelsa Coffee <br> Beans</p>
@@ -132,8 +132,8 @@
     <section>
         <div class="bestsellers container">
             <div class="top-bestseller">
-                <a href="products.html">
-                    <p class="all-products">Shop all products</p>
+                <a onclick="fetchPage('products')">
+                    <p class="all-products" >Shop all products</p>
                 </a>
                 <p class="title-bestsellers"><span class="shop">Shop</span><br>Our Bestsellers</p>
             </div>
@@ -224,7 +224,7 @@
                 <ul class="navbar">
                     <li class="navbar-f">About Us</li>
                     <a id="contact">
-                        <li class="navbar-f">Contact Us</li>
+                        <li class="navbar-f" onclick="fetchPage('contactUs')">Contact Us</li>
                     </a>
                     <li class="navbar-f">Policy & Privacy</li>
                 </ul>
@@ -253,36 +253,30 @@
                     document.querySelector("*").innerHTML = data;
                 });
         }
-        document.getElementById("home-nav").addEventListener("click", () => {
+        document.getElementById("home").addEventListener("click", () => {
             fetchPage("home");
         });
-        document.getElementById("shop").addEventListener("click", () => {
+        document.getElementById("products").addEventListener("click", () => {
             fetchPage("products");
         });
         document.getElementById("services").addEventListener("click", () => {
             fetchPage("services");
         });
-        document.getElementById("contact").addEventListener("click", () => {
+        document.getElementById("contactUs").addEventListener("click", () => {
             fetchPage("contactUs");
         });
-        document.getElementById("ad1").addEventListener("click", () => {
-            fetchPage("products");
-        });
-        document.getElementById("ad2").addEventListener("click", () => {
-            fetchPage("products");
-        });
-        document.getElementById("arabica").addEventListener("click", () => {
-            fetchPage("arabica");
-        });
-        document.getElementById("robusta").addEventListener("click", () => {
-            fetchPage("robusta");
-        });
-        document.getElementById("liberica").addEventListener("click", () => {
-            fetchPage("liberica");
-        });
-        document.getElementById("excelsa").addEventListener("click", () => {
-            fetchPage("excelsa");
-        });
+        // document.getElementById("arabica").addEventListener("click", () => {
+        //     fetchPage("arabica");
+        // });
+        // document.getElementById("robusta").addEventListener("click", () => {
+        //     fetchPage("robusta");
+        // });
+        // document.getElementById("liberica").addEventListener("click", () => {
+        //     fetchPage("liberica");
+        // });
+        // document.getElementById("excelsa").addEventListener("click", () => {
+        //     fetchPage("excelsa");
+        // });
     </script>
 
 </body>

@@ -29,13 +29,13 @@
         <nav class="menu">
             <ul class="navbar">
                 <ul>
-                    <a id="home-nav">
+                    <a onclick="fetchPage('home')">
                         <li class="navbar-h">Home</li>
                     </a>
-                    <a id="shop">
+                    <a onclick="fetchPage('products')">
                         <li class="navbar-h">Shop</li>
                     </a>
-                    <a id="services">
+                    <a onclick="fetchPage('services')">
                         <li class="navbar-h">Services</li>
                     </a>
                 </ul>
@@ -141,7 +141,7 @@
                 <ul class="navbar">
                     <li class="navbar-f">About Us</li>
                     <a id="contact">
-                        <li class="navbar-f">Contact Us</li>
+                        <li class="navbar-f" onclick="fetchPage('contactUs')">Contact Us</li>
                     </a>
                     <li class="navbar-f">Policy & Privacy</li>
                 </ul>
@@ -163,7 +163,6 @@
     <!-- //JavaScript files -->
     <script src="js/cart.js"></script>
 
-
     <script>
         function fetchPage(page) {
             fetch(`/${page}`)
@@ -172,16 +171,16 @@
                     document.querySelector("*").innerHTML = data;
                 });
         }
-        document.getElementById("home-nav").addEventListener("click", () => {
+        document.getElementById("home").addEventListener("click", () => {
             fetchPage("home");
         });
-        document.getElementById("shop").addEventListener("click", () => {
+        document.getElementById("products").addEventListener("click", () => {
             fetchPage("products");
         });
         document.getElementById("services").addEventListener("click", () => {
             fetchPage("services");
         });
-        document.getElementById("contact").addEventListener("click", () => {
+        document.getElementById("contactUs").addEventListener("click", () => {
             fetchPage("contactUs");
         });
     </script>
